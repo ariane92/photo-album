@@ -7,7 +7,6 @@ export const Container = styled.View``;
 export const ImagesList = styled(FlatList as new () => FlatList<ApiRequest>)``;
 
 export const Images = styled.Image`
-  width: 72px;
-  height: 72px;
-  border-radius: 36px;
+  width: 300px;
+  height: 300px;
 `;

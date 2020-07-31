@@ -14,7 +14,6 @@ function TabApp() {
     <Tab.Navigator initialRouteName="HomePage">
       <Tab.Screen component={HomePage} name={'HomePage'} />
       <Tab.Screen component={More} name={'More'} />
-      <Tab.Screen component={More} name={'More'} />
     </Tab.Navigator>
   );
 }
@@ -22,8 +21,8 @@ function TabApp() {
 const Routes: React.FC = () => {
   return (
     <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="TabApp" component={TabApp} />
+      <Stack.Screen name="Login" component={Login} />
     </Stack.Navigator>
   );
 };

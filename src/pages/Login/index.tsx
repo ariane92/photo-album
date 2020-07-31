@@ -33,7 +33,7 @@ const Login: React.FC = () => {
             </View>
             <Input name="email" icon="mail" placeholder="E-mail" />
             <Input name="password" icon="lock" placeholder="Senha" />
-            <Button onPress={() => navigation.navigate('HomePage')}>
+            <Button onPress={() => navigation.navigate('TabApp')}>
               Entrar
             </Button>
           </Container>
