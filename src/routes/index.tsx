@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Login from '../pages/Login';
 import HomePage from '../pages/HomePage';
 import More from '../pages/More';
+import Camera from '../components/Camera';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -13,6 +14,7 @@ function TabApp() {
   return (
     <Tab.Navigator initialRouteName="HomePage">
       <Tab.Screen component={HomePage} name={'HomePage'} />
+      <Tab.Screen component={Camera} name={'Camera'} />
       <Tab.Screen component={More} name={'More'} />
     </Tab.Navigator>
   );
