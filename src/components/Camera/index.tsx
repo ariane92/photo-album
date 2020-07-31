@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import {Container} from './styles';
 
 const Camera: React.FC = () => {
-  const handleCamera = useCallback(() => {
+  useEffect(() => {
     ImagePicker.showImagePicker(
       {
         title: 'Selecione uma imagem',
@@ -32,10 +32,7 @@ const Camera: React.FC = () => {
       },
     );
   }, []);
-  return (
-    <Text onPress={handleCamera}>Camera</Text>
-    //<TouchableOpacity onPress={handleCamera}
-  );
+  return <View />;
 };
 
 export default Camera;

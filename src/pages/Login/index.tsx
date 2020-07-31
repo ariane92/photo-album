@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import {
   Image,
   KeyboardAvoidingView,
   Platform,
   View,
   ScrollView,
+  ActivityIndicator,
 } from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
@@ -16,7 +17,21 @@ import {Container, Title} from './styles';
 import logo from '../../assets/logo.png';
 
 const Login: React.FC = () => {
+  const [loading, setLoading] = useState(false);
   const navigation = useNavigation();
+
+  const navigateToHome = useCallback(() => {
+    navigation.navigate('TabApp');
+  }, [navigation]);
+
+  const delay = useCallback(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigateToHome();
+    }, 3000);
+  }, [navigateToHome]);
+
   return (
     <>
       <KeyboardAvoidingView
@@ -33,10 +48,9 @@ const Login: React.FC = () => {
             </View>
             <Input name="email" icon="mail" placeholder="E-mail" />
             <Input name="password" icon="lock" placeholder="Senha" />
-            <Button onPress={() => navigation.navigate('TabApp')}>
-              Entrar
-            </Button>
+            <Button onPress={delay}>Entrar</Button>
           </Container>
+          <View>{loading && <ActivityIndicator size={20} color="#000" />}</View>
         </ScrollView>
       </KeyboardAvoidingView>
     </>
