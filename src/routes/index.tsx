@@ -13,7 +13,8 @@ const AppRoutes: React.FC = () => {
       screenOptions={{
         headerShown: false,
         cardStyle: {backgroundColor: '#312e38'},
-      }}>
+      }}
+      initialRouteName="Login">
       <App.Screen name="Login" component={Login} />
       <App.Screen name="HomePage" component={HomePage} />
       <App.Screen name="More" component={More} />

@@ -1,8 +1,8 @@
 import React from 'react';
 import {Container} from './styles';
 
-const Logout: React.FC = () => {
+const HomePage: React.FC = () => {
   return <Container />;
 };
 
-export default Logout;
+export default HomePage;
