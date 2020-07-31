@@ -1,25 +1,29 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Login from '../pages/Login';
 import HomePage from '../pages/HomePage';
 import More from '../pages/More';
 
-const App = createStackNavigator();
+const App = createBottomTabNavigator();
 
-const AppRoutes: React.FC = () => {
+const Routes: React.FC = () => {
   return (
-    <App.Navigator
-      screenOptions={{
-        headerShown: false,
-        cardStyle: {backgroundColor: '#312e38'},
-      }}
-      initialRouteName="Login">
+    <App.Navigator initialRouteName="Login">
       <App.Screen name="Login" component={Login} />
-      <App.Screen name="HomePage" component={HomePage} />
-      <App.Screen name="More" component={More} />
+      <App.Screen
+        name="HomePage"
+        component={HomePage}
+        options={{title: 'Feed'}}
+      />
+      <App.Screen
+        name="Camera"
+        component={More}
+        options={{title: 'Tirar Foto'}}
+      />
+      <App.Screen name="More" component={More} options={{title: 'Mais'}} />
     </App.Navigator>
   );
 };
 
-export default AppRoutes;
+export default Routes;
