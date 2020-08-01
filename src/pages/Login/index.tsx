@@ -50,7 +50,9 @@ const Login: React.FC = () => {
             <Input name="password" icon="lock" placeholder="Senha" />
             <Button onPress={delay}>Entrar</Button>
           </Container>
-          <View>{loading && <ActivityIndicator size={20} color="#000" />}</View>
+          <View style={{bottom: 30}}>
+            {loading && <ActivityIndicator size={20} color="#312e38" />}
+          </View>
         </ScrollView>
       </KeyboardAvoidingView>
     </>
