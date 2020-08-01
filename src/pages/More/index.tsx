@@ -3,7 +3,7 @@ import {useNavigation} from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/Feather';
 
-import {Container, BackToSignIn, BackToSignInText} from './styles';
+import {BackToSignIn, BackToSignInText} from './styles';
 
 const More: React.FC = () => {
   const navigation = useNavigation();

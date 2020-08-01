@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/Feather';
 import Login from '../pages/Login';
 import HomePage from '../pages/HomePage';
@@ -9,29 +9,19 @@ import More from '../pages/More';
 import Camera from '../components/Camera';
 
 const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 function TabApp() {
   return (
     <Tab.Navigator
       initialRouteName="HomePage"
-      tabBarOptions={{
-        activeTintColor: '#000',
-        activeBackgroundColor: '#ccffff',
-        labelStyle: {
-          alignItems: 'center',
-          alignContent: 'center',
-          fontSize: 12,
-        },
-      }}>
+      barStyle={{backgroundColor: '#b9b9b9'}}>
       <Tab.Screen
         component={HomePage}
         name={'HomePage'}
         options={{
           tabBarLabel: 'Feed',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="rss" color={color} size={size} />
-          ),
+          tabBarIcon: ({color}) => <Icon name="rss" color={color} size={22} />,
         }}
       />
       <Tab.Screen
@@ -39,8 +29,8 @@ function TabApp() {
         name={'instagram'}
         options={{
           tabBarLabel: 'Tirar Foto',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="camera" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <Icon name="instagram" color={color} size={22} />
           ),
         }}
       />
@@ -49,8 +39,8 @@ function TabApp() {
         name={'More'}
         options={{
           tabBarLabel: 'Mais',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="more-horizontal" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <Icon name="more-horizontal" color={color} size={22} />
           ),
         }}
       />

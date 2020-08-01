@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import {Text, View, Image} from 'react-native';
+
 import axios from 'axios';
 
 import {Container, ImagesList, Images} from './styles';
@@ -24,6 +24,7 @@ const HomePage: React.FC = () => {
       <ImagesList
         data={images}
         keyExtractor={(image) => String(image.id)}
+        numColumns={2}
         renderItem={({item}) => <Images source={{uri: item.url}} />}
       />
     </Container>

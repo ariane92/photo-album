@@ -51,7 +51,7 @@ const Login: React.FC = () => {
             <Button onPress={delay}>Entrar</Button>
           </Container>
           <View style={{bottom: 30}}>
-            {loading && <ActivityIndicator size={20} color="#312e38" />}
+            {loading && <ActivityIndicator size={22} color="#312e38" />}
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
