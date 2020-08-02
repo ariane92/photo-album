@@ -41,7 +41,7 @@ Aplicação que simula um álbum de fotos com tela de login. As imagens utilizad
 ## 📝 License
 
 Copyright © 2020 [Ariane Mateus](https://github.com/ariane92).<br />
-This project is [MIT](https://github.com/ariane92/photo-album/LICENSE.txt) licensed.
+This project is [MIT](https://github.com/ariane92/photo-album/blob/master/LICENSE.txt) licensed.
 
 ---
 
