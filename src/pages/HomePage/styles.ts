@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {FlatList, Dimensions} from 'react-native';
+import {FlatList} from 'react-native';
 import {ApiRequest} from './index';
 
 export const Container = styled.View`
@@ -12,5 +12,5 @@ export const ImagesList = styled(FlatList as new () => FlatList<ApiRequest>)``;
 export const Images = styled.Image`
   width: 180px;
   height: 180px;
-  margin: 5px;
+  margin: 3px;
 `;

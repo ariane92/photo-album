@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 import {View, Alert} from 'react-native';
 import ImagePicker from 'react-native-image-picker';
-
-const Camera: React.FC = () => {
+import {useNavigation} from '@react-navigation/native';
+const Camera: React.FC<any> = () => {
+  const navigation = useNavigation();
   useEffect(() => {
     ImagePicker.launchCamera(
       {
@@ -11,16 +12,19 @@ const Camera: React.FC = () => {
       },
       (response) => {
         if (response.didCancel) {
-          return;
+          navigation.navigate('HomePage');
         }
 
         if (response.error) {
           Alert.alert('Erro ao tentar utilizar a camera');
           return;
+        } else {
+          const source = {uri: response.uri};
+          navigation.navigate('HomePage');
         }
       },
     );
-  }, []);
+  }, [navigation]);
   return <View />;
 };
 
