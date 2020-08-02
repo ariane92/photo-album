@@ -2,7 +2,7 @@
 
 ## :information_source: Sobre
 
-Aplicação que simula um album de fotos com tela de login. As imagens utilizadas são consumidas de uma API pública. 
+Aplicação que simula um álbum de fotos com tela de login. As imagens utilizadas são consumidas de uma API pública. 
 
 
 ## :rocket: Tecnologias Utilizadas 
