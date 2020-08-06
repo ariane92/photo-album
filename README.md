@@ -16,6 +16,8 @@ Aplicação que simula um álbum de fotos com tela de login. As imagens utilizad
 - [Axios](https://github.com/axios/axios)
 - [ReactNavigation](https://reactnavigation.org/docs/getting-started)
 - [BottomTabNavigator](https://reactnavigation.org/docs/bottom-tab-navigator/)
+- [Vector Icons](https://github.com/oblador/react-native-vector-icons)
+
 <br/>
 
 ## :gear: Como executar
