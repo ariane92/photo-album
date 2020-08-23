@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View, Alert} from 'react-native';
 import ImagePicker from 'react-native-image-picker';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useFocusEffect} from '@react-navigation/native';
 const Camera: React.FC<any> = () => {
   const navigation = useNavigation();
-  useEffect(() => {
+  useFocusEffect(() => {
     ImagePicker.launchCamera(
       {
         cancelButtonTitle: 'Cancelar',
@@ -24,7 +24,7 @@ const Camera: React.FC<any> = () => {
         }
       },
     );
-  }, [navigation]);
+  });
   return <View />;
 };
 
